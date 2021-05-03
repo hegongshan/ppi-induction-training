@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#测试命名
+# 测试命名
 # for file in `ls /etc`;do
 # 	echo ${file}
 # done
