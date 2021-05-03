@@ -1,5 +1,0 @@
-#!/bin/bash
-
-echo "----Shell 数组----"
-schools= ("ccnu" "whu" "fdu")
-echo "schools: "${schools[@]}
