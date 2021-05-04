@@ -111,3 +111,112 @@ then
 else
 	echo "$a < 5 或 $b > 100 不成立"
 fi
+
+echo "----逻辑运算符----"
+# 使用逻辑运算符时，需要使用双括号
+# a < 100 && b > 100
+if [[ $a -lt 100 && $b -gt 100 ]]; then
+	echo "返回true"
+else
+	echo "返回false"
+fi
+
+# a < 100 || b > 100
+if [[ $a -lt 100 || $b -gt 100 ]]; then
+	echo "返回true"
+else
+	echo "返回false"
+fi
+
+echo "----字符串运算----"
+c="hgs"
+d="123"
+
+# 对于then，要么条件语句后添加封号，要么独占一行
+if [ $c = $d ] 
+then
+	echo "$c = $d: c等于d"
+else
+	echo "$c = $d: c不等于d"
+fi
+
+if [ $c != $d ] 
+then
+	echo "$c != $d: c不等于d"
+else
+	echo "$c != $d: c等于d"
+fi
+
+if [ -z $c ] 
+then
+	echo "-z $c: 字符串长度为0"
+else
+	echo "-z $c: 字符串长度不为0"
+fi
+
+# 需要添加双引号
+if [ -n "$c" ] 
+then
+	echo "-n $c: 字符串长度不为0"
+else
+	echo "-n $c: 字符串长度为0"
+fi
+
+if [ $c ] 
+then
+	echo "$c: 字符串不为空"
+else
+	echo "$c: 字符串为空"
+fi
+
+echo "----文件测试运算符----"
+file="./1-1.shell-variable.sh"
+
+if [ -r $file ]
+then
+	echo "文件可读"
+else
+	echo "文件不可读"
+fi
+
+if [ -w $file ]
+then
+	echo "文件可写"
+else
+	echo "文件不可写"
+fi
+
+if [ -x $file ]
+then
+	echo "文件可执行"
+else
+	echo "文件不可执行"
+fi
+
+if [ -f $file ]
+then
+	echo "文件为普通文件"
+else
+	echo "文件为特殊文件"
+fi
+
+if [ -d $file ]
+then
+	echo "文件是一个目录"
+else 
+	echo "文件不是一个目录"
+fi
+
+if [ -s $file ]
+then
+	echo "文件不为空"
+else
+	echo "文件为空"
+fi
+
+if [ -e $file ]
+then
+	echo "文件存在"
+else
+	echo "文件不存在"
+fi
