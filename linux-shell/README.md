@@ -7,3 +7,7 @@
 #### 1.6 printf命令
 
 ![printf命令](../img/1-6.shell-printf.png)
+
+#### 1.7 test命令
+
+![test命令](../img/1-7.shell-test.png)
