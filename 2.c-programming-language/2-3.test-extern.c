@@ -1,6 +1,5 @@
 #include <stdio.h>
 
-
 extern int a, b;
 
 int add2() 

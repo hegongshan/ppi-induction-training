@@ -15,3 +15,7 @@
 #### 2.4 C常量
 
 ![常量](../img/2-4.c-constants.png)
+
+#### 2.5 存储类
+
+![存储类](../img/2-5.c-storage-classes.png)
