@@ -21,6 +21,11 @@
 
 ![函数](../img/1-9.shell-function.png)
 
+#### 1.10 重定向
+
+![测试1](../img/1-10.shell-io-redirections1.png)
+
+![测试2](../img/1-10.shell-io-redirections2.png)
 
 #### 1.11 文件包含
 
