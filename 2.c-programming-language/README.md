@@ -7,3 +7,7 @@
 #### 2.2 数据类型
 
 ![数据类型](../img/2-2.c-data-types.png)
+
+#### 2.3 C变量
+
+![变量](../img/2-3.c-variables.png)
