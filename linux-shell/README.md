@@ -16,3 +16,7 @@
 
 ![流程控制1](../img/1-8.shell-process-control1.png)
 ![流程控制2](../img/1-8.shell-process-control2.png)
+
+#### 1.9 函数
+
+![函数](../img/1-9.shell-function.png)
