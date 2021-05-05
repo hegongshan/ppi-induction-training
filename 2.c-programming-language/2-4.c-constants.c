@@ -8,7 +8,7 @@ int main()
 	printf("Hello\tWorld\n\n");
 
 	// 1.测试#define
-	float circleArea = R * PI * PI;
+	float circleArea = PI * R * R;
 	printf("value of circle area: %.4f\n", circleArea);
 
 	// 2.测试const
