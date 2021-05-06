@@ -19,3 +19,11 @@
 #### 2.5 存储类
 
 ![存储类](../img/2-5.c-storage-classes.png)
+
+#### 2.6 运算符
+
+![运算符1](../img/2-6.c-operators1.png)
+
+![运算符2](../img/2-6.c-operators2.png)
+
+![运算符3](../img/2-6.c-operators3.png)
