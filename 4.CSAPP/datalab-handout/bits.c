@@ -163,10 +163,13 @@ int tmin(void) {
  *   Rating: 1
  */
 int isTmax(int x) {
+  /*
   int mask = 0xFF;
   mask |= mask << 8;
   mask |= mask << 15;
   return !(x ^ mask);
+  */
+  return !(~(x + 1) ^ x) & !!(~x);
 }
 /* 
  * allOddBits - return 1 if all odd-numbered bits in word set to 1
@@ -224,7 +227,12 @@ int conditional(int x, int y, int z) {
  *   Rating: 3
  */
 int isLessOrEqual(int x, int y) {
-  return 2;
+  int sign_x = x >> 31;
+  int sign_y = y >> 31;
+  int is_different_sign = sign_x ^ sign_y;
+  int negate_x = ~x + 1;
+  int sign_y_minus_x = (y + negate_x) >> 31;
+  return (!!((is_different_sign & sign_x))) | ((!is_different_sign) & (!sign_y_minus_x));
 }
 //4
 /* 
@@ -236,7 +244,7 @@ int isLessOrEqual(int x, int y) {
  *   Rating: 4 
  */
 int logicalNeg(int x) {
-  return 2;
+  return ((x | (~x + 1)) >> 31) + 1;
 }
 /* howManyBits - return the minimum number of bits required to represent x in
  *             two's complement
@@ -266,7 +274,28 @@ int howManyBits(int x) {
  *   Rating: 4
  */
 unsigned floatScale2(unsigned uf) {
-  return 2;
+  unsigned sign_mask = 0x80000000;
+  unsigned exp_mask = 0x7F800000;
+  unsigned tail_mask = 0x007FFFFF;
+  unsigned exp = uf & exp_mask;
+
+  // 若阶码=127
+  if (!(exp ^ exp_mask)) {
+    return uf;
+  }
+
+  // 若阶码为0
+  if (!(exp ^ 0x0)) {
+    unsigned sign = uf & sign_mask;
+    unsigned tail = uf & tail_mask;
+    return sign | (tail << 1);
+  }
+
+  // 否则，阶码+1
+  exp  = ((exp >> 23) + 1) << 23;
+  uf &= ~exp_mask;
+  uf |= exp;
+  return uf;
 }
 /* 
  * floatFloat2Int - Return bit-level equivalent of expression (int) f
