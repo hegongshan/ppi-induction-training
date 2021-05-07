@@ -276,25 +276,29 @@ int howManyBits(int x) {
 unsigned floatScale2(unsigned uf) {
   unsigned sign_mask = 0x80000000;
   unsigned exp_mask = 0x7F800000;
+  unsigned exp_plus_one = 0x00800000;
   unsigned tail_mask = 0x007FFFFF;
   unsigned exp = uf & exp_mask;
 
-  // 若阶码=127
-  if (!(exp ^ exp_mask)) {
+  // 若阶码8位均为1，即NaN
+  if (exp == exp_mask) {
     return uf;
   }
 
-  // 若阶码为0
-  if (!(exp ^ 0x0)) {
+  // 若阶码为0，即输入为0或者非常小的数字
+  if (exp == 0) {
     unsigned sign = uf & sign_mask;
     unsigned tail = uf & tail_mask;
     return sign | (tail << 1);
   }
 
   // 否则，阶码+1
+  /*
   exp  = ((exp >> 23) + 1) << 23;
   uf &= ~exp_mask;
   uf |= exp;
+  */
+  uf += exp_plus_one;
   return uf;
 }
 /* 
