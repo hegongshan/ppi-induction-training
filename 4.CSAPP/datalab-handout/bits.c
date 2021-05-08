@@ -330,5 +330,15 @@ int floatFloat2Int(unsigned uf) {
  *   Rating: 4
  */
 unsigned floatPower2(int x) {
-    return 2;
+    const int INF = 0xFF << 23;
+    int exp = x + 127;
+    // 1.若为负数
+    if (exp >> 31) {
+      return 0;
+    }
+    // 2.若为无穷大
+    if (exp >= 0xFF) {
+      return INF;
+    }
+    return exp << 23;
 }
