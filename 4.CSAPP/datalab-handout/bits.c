@@ -259,7 +259,26 @@ int logicalNeg(int x) {
  *  Rating: 4
  */
 int howManyBits(int x) {
-  return 0;
+  int b16, b8, b4, b2, b1;
+  int sign = x >> 31;
+  // 若为负数，则按位取反；若为正数，则不变
+  x = (sign & ~x) | (~sign & x);
+  // 1.若高16位有1，则至少需要16位
+  b16 = (!!(x >> 16)) << 4;
+  x >>= b16;
+
+  b8 = (!!(x >> 8)) << 3;
+  x >>= b8;
+
+  b4 = (!!(x >> 4)) << 2;
+  x >>= b4;
+
+  b2 = (!!(x >> 2)) << 1;
+  x >>= b2;
+
+  b1 = (!!(x >> 1));
+  x >>= b1;
+  return b16 + b8 + b4 + b2 + b1 + x + 1;
 }
 //float
 /* 
@@ -274,18 +293,18 @@ int howManyBits(int x) {
  *   Rating: 4
  */
 unsigned floatScale2(unsigned uf) {
-  unsigned sign_mask = 0x1 << 31;
-  unsigned exp_mask = 0xFF << 23;
-  unsigned exp_plus_one = 0x1 << 23;
-  unsigned tail_mask = 0x007FFFFF;
+  const unsigned sign_mask = 0x1 << 31;
+  const unsigned exp_mask = 0xFF << 23;
+  const unsigned exp_plus_one = 0x1 << 23;
+  const unsigned tail_mask = 0x007FFFFF;
   unsigned exp = uf & exp_mask;
 
-  // 若阶码8位均为1，即NaN
+  // 若阶码均为1
   if (exp == exp_mask) {
     return uf;
   }
 
-  // 若阶码为0，即输入为0或者非常小的数字
+  // 若阶码为0，即输入为0或者接近0的小数
   if (exp == 0) {
     unsigned sign = uf & sign_mask;
     unsigned tail = uf & tail_mask;
@@ -314,29 +333,29 @@ unsigned floatScale2(unsigned uf) {
  *   Rating: 4
  */
 int floatFloat2Int(unsigned uf) {
-  unsigned exp_mask = 0xFF << 23;
-  unsigned sign_mask = 0x1 << 31;
-  unsigned tail_mask = 0x007FFFFF;
+  const unsigned sign_mask = 0x1 << 31;
+  const unsigned exp_mask = 0xFF << 23;
+  const unsigned tail_mask = 0x007FFFFF;
+  int sign = uf & sign_mask;
   int exp = uf & exp_mask;
+  int tail = uf & tail_mask;
   exp = (exp >> 23) - 127;
   // 1.若指数为负数
   if (exp < 0) {
     return 0;
   }
   // 2.若指数超出了范围
-  if (exp >= 31) {
+  if (exp > 31) {
     return sign_mask;
   }
-  int sign = uf & sign_mask;
-  int tail = uf & tail_mask;
-  // 加上隐含位1
+  // 3.加上隐含位1
   tail |= 1 << 23;
   if (exp <= 23) {
     tail >>= 23 - exp;
   } else {
     tail <<= exp - 23;
   }
-  // 若结果为负数
+  // 4.若结果为负数
   if (sign) {
     return ~tail + 1;
   }
