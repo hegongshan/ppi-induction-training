@@ -274,9 +274,9 @@ int howManyBits(int x) {
  *   Rating: 4
  */
 unsigned floatScale2(unsigned uf) {
-  unsigned sign_mask = 0x80000000;
-  unsigned exp_mask = 0x7F800000;
-  unsigned exp_plus_one = 0x00800000;
+  unsigned sign_mask = 0x1 << 31;
+  unsigned exp_mask = 0xFF << 23;
+  unsigned exp_plus_one = 0x1 << 23;
   unsigned tail_mask = 0x007FFFFF;
   unsigned exp = uf & exp_mask;
 
@@ -314,7 +314,33 @@ unsigned floatScale2(unsigned uf) {
  *   Rating: 4
  */
 int floatFloat2Int(unsigned uf) {
-  return 2;
+  unsigned exp_mask = 0xFF << 23;
+  unsigned sign_mask = 0x1 << 31;
+  unsigned tail_mask = 0x007FFFFF;
+  int exp = uf & exp_mask;
+  exp = (exp >> 23) - 127;
+  // 1.若指数为负数
+  if (exp < 0) {
+    return 0;
+  }
+  // 2.若指数超出了范围
+  if (exp >= 31) {
+    return sign_mask;
+  }
+  int sign = uf & sign_mask;
+  int tail = uf & tail_mask;
+  // 加上隐含位1
+  tail |= 1 << 23;
+  if (exp <= 23) {
+    tail >>= 23 - exp;
+  } else {
+    tail <<= exp - 23;
+  }
+  // 若结果为负数
+  if (sign) {
+    return ~tail + 1;
+  }
+  return tail;
 }
 /* 
  * floatPower2 - Return bit-level equivalent of the expression 2.0^x
@@ -330,13 +356,13 @@ int floatFloat2Int(unsigned uf) {
  *   Rating: 4
  */
 unsigned floatPower2(int x) {
-    const int INF = 0xFF << 23;
+    const unsigned INF = 0xFF << 23;
     int exp = x + 127;
-    // 1.若为负数
-    if (exp >> 31) {
+    // 1.若阶码为负数
+    if (exp < 0) {
       return 0;
     }
-    // 2.若为无穷大
+    // 2.若阶码大于255
     if (exp >= 0xFF) {
       return INF;
     }
