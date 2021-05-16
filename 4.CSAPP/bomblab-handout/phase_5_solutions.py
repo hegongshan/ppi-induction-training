@@ -5,8 +5,10 @@ if __name__ == '__main__':
 	e_list = []
 	r_list = []
 	s_list = []
+	# 遍历所有的ASCII码值
 	for i in range(128):
 		c = chr(i)
+		# 取低4位
 		v = i & 0xf;
 		if v == 9:
 			f_list.append(c)
@@ -21,6 +23,7 @@ if __name__ == '__main__':
 		elif v == 7:
 			s_list.append(c)
 
+	# 生成答案
 	solutions = []
 	for f in f_list:
 		for l in l_list:
