@@ -27,3 +27,16 @@
 ![运算符2](../img/2-6.c-operators2.png)
 
 ![运算符3](../img/2-6.c-operators3.png)
+
+#### 2.7 判断
+
+![判断](../img/2-7.c-decision.png)
+
+#### 2.8 循环
+
+![循环1](../img/2-8.c-loops1.png)
+
+![循环2](../img/2-8.c-loops2.png)
+
+![循环3](../img/2-8.c-loops3.png)
+
