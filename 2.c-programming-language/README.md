@@ -40,3 +40,6 @@
 
 ![循环3](../img/2-8.c-loops3.png)
 
+#### 2.9 函数
+
+![函数](../img/2-9.c-functions.png)
