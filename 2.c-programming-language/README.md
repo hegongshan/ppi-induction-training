@@ -61,3 +61,7 @@
 #### 2.13 指针
 
 ![指针](../img/2-13.c-pointers.png)
+
+#### 2.14 函数指针与回调函数
+
+![函数指针与回调函数](../img/2-14.c-fun-pointer-callback.png)
