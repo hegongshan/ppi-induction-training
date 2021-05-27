@@ -1,5 +1,13 @@
 ### CSAPP 实验
 
-#### [1.Data Lab](./datalab-handout/bits.c)
+#### 1.Data Lab
+
+[实验源码][./datalab-handout/bits.c)
 
 ![数据实验](../img/4-1.datalab.png)
+
+#### 2.Bomb Lab
+
+![bomb实验](../img/4-2.bomblab.png)
+
+
