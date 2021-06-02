@@ -12,4 +12,16 @@
 
 ![bomb实验](../img/4-2.bomblab.png)
 
+#### 3.Attack Lab
 
+* phase1
+
+[实验结果](./solutions/phase1_solution.txt)
+
+![phase1实验](../img/4-3.phase1.png)
+
+* phase2
+
+[实验结果](./solutions/phase2_solution.txt)
+
+![phase2实验](../img/4-3.phase1.png)
