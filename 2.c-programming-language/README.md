@@ -100,4 +100,4 @@
 
 [io实验代码](./2-20.c-input-output.c)
 
-[输入输出](../img/2-20.c-input-output.png)
+![输入输出](../img/2-20.c-input-output.png)
