@@ -89,3 +89,9 @@
 [位域实验代码](./2-18.c-bit-fields.c)
 
 ![位域](../img/2-18.c-bit-fields.png)
+
+#### 2.19 typedef
+
+[typedef关键字实验代码](./2-19.c-typedef.c)
+
+![typedef](../img/2-19.c-typedef.png)
