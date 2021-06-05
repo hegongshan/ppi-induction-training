@@ -28,7 +28,7 @@ int main()
 
 
 	printf("--------2.#define指令--------\n");
-	// 除了为数据类型定义别名外，#define可以为数值定义别名
+	// 除了为数据类型定义别名外，#define还可以为数值定义别名
 	printf("TURE的值为：%d\n", TRUE);
 	printf("FALSE的值为：%d\n", FALSE);
 	return 0;

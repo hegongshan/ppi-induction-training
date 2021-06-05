@@ -95,3 +95,9 @@
 [typedef关键字实验代码](./2-19.c-typedef.c)
 
 ![typedef](../img/2-19.c-typedef.png)
+
+#### 2.20 输入&输出
+
+[io实验代码](./2-20.c-input-output.c)
+
+[输入输出](../img/2-20.c-input-output.png)
