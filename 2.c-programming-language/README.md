@@ -60,7 +60,9 @@
 
 #### 2.13 指针
 
-![指针](../img/2-13.c-pointers.png)
+![指针1](../img/2-13.c-pointers1.png)
+
+![指针2](../img/2-13.c-pointers2.png)
 
 #### 2.14 函数指针与回调函数
 

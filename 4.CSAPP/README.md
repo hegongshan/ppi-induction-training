@@ -8,20 +8,26 @@
 
 #### 2.Bomb Lab
 
-[实验结果](./bomblab-handout/six_strings.txt)
+[实验原文件](./bomblab-handout/six_strings.txt)
 
-![bomb实验](../img/4-2.bomblab.png)
+![bomb实验结果](../img/4-2.bomblab.png)
 
 #### 3.Attack Lab
 
 * phase1
 
-[实验结果](./solutions/phase1_solution.txt)
+[实验原文件](./attacklab-handout/solutions/phase1_solution.txt)
 
-![phase1实验](../img/4-3.phase1.png)
+![phase1实验结果](../img/4-3.phase1.png)
 
 * phase2
 
-[实验结果](./solutions/phase2_solution.txt)
+[实验原文件](./attacklab-handout/solutions/phase2_solution.txt)
 
-![phase2实验](../img/4-3.phase1.png)
+![phase2实验结果](../img/4-3.phase1.png)
+
+* phase3
+
+[实验原文件](./attacklab-handout/solutions/phase3_solution.txt)
+
+![phase3实验结果](../img/4-3.phase3.png)
