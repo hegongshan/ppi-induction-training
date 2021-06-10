@@ -103,3 +103,9 @@
 [io实验代码](./2-20.c-input-output.c)
 
 ![输入输出](../img/2-20.c-input-output.png)
+
+#### 2.21 文件读写
+
+[文件读写实验代码](./2-21.c-file-io.c)
+
+![文件读写](../img/2-21.c-file-io.png)
