@@ -109,3 +109,9 @@
 [文件读写实验代码](./2-21.c-file-io.c)
 
 ![文件读写](../img/2-21.c-file-io.png)
+
+#### 2.22 预处理器
+
+![预处理器实验代码](./2-22.c-preprocessors.c)
+
+![预处理器](../img/2-22.c-preprocessors.png)
