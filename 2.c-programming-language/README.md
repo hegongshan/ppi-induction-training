@@ -145,3 +145,9 @@
 [源文件](./2-28.c-memory-management.c)
 
 ![内存管理](../img/2-28.c-memory-management.png)
+
+#### 2.29 命令行参数
+
+[源文件](./2-29.c-command-line-arguments.c)
+
+![命令行参数](../img/2-29.c-command-line-arguments.png)
