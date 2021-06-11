@@ -133,3 +133,9 @@
 [源文件](./2-26.c-recursion.c)
 
 ![递归](../img/2-26.c-recursion.png)
+
+#### 2.27 可变参数
+
+[源文件](./2-27.c-variable-arguments.c)
+
+![可变参数](../img/2-27.c-variable-arguments.png)
