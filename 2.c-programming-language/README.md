@@ -157,3 +157,10 @@
 [排序代码](./2-30.sort-algorithm.c)
 
 ![排序算法](../img/2-30.sort-algorithm.png)
+
+#### 2.31 语言实例
+
+[源文件](./2-31.c-examples.c)
+
+![语言实例](../img/2-31.c-examples2.png)
+
