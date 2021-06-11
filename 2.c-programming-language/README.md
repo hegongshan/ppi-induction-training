@@ -112,6 +112,12 @@
 
 #### 2.22 预处理器
 
-![预处理器实验代码](./2-22.c-preprocessors.c)
+[预处理器实验代码](./2-22.c-preprocessors.c)
 
 ![预处理器](../img/2-22.c-preprocessors.png)
+
+#### 2.24 强制类型转换
+
+[源文件](./2-24.c-type-casting.c)
+
+![强制类型转换](../img/2-24.c-type-casting.c)
