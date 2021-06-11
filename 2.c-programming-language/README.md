@@ -127,3 +127,9 @@
 [源文件](./2-25.c-error-handling.c)
 
 ![错误处理](../img/2-25.c-error-handling.png)
+
+#### 2.26 递归
+
+[源文件](./2-26.c-recursion.c)
+
+![递归](../img/2-26.c-recursion.png)
