@@ -151,3 +151,9 @@
 [源文件](./2-29.c-command-line-arguments.c)
 
 ![命令行参数](../img/2-29.c-command-line-arguments.png)
+
+#### 2.30 排序算法
+
+[排序代码](./2-30.sort-algorithm.c)
+
+![排序算法](../img/2-30.sort-algorithm.png)
