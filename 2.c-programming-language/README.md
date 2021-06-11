@@ -139,3 +139,9 @@
 [源文件](./2-27.c-variable-arguments.c)
 
 ![可变参数](../img/2-27.c-variable-arguments.png)
+
+#### 2.28 内存管理
+
+[源文件](./2-28.c-memory-management.c)
+
+![内存管理](../img/2-28.c-memory-management.png)
