@@ -120,4 +120,10 @@
 
 [源文件](./2-24.c-type-casting.c)
 
-![强制类型转换](../img/2-24.c-type-casting.c)
+![强制类型转换](../img/2-24.c-type-casting.png)
+
+#### 2.25 错误处理
+
+[源文件](./2-25.c-error-handling.c)
+
+![错误处理](../img/2-25.c-error-handling.png)
