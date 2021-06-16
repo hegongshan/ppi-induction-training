@@ -31,3 +31,9 @@
 [实验原文件](./attacklab-handout/solutions/phase3_solution.txt)
 
 ![phase3实验结果](../img/4-3.phase3.png)
+
+* phase4
+
+[实验文件](./attacklab-handout/solutions/phase4_solutions/solution1.txt)
+
+![phase4实验结果](../img/4-3.phase4.png)
