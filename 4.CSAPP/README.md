@@ -34,12 +34,12 @@
 
 * phase4
 
-[实验文件](./attacklab-handout/solutions/phase4_solutions/solution1.txt)
+[实验文件](./attacklab-handout/solutions/phase4_solution/solution1.txt)
 
 ![phase4实验结果](../img/4-3.phase4.png)
 
 * phase5
 
-[实验文件](./attacklab-handout/solutions/phase5_solutions/solution1.txt)
+[实验文件](./attacklab-handout/solutions/phase5_solution/solution1.txt)
 
 ![phase5实验结果](../img/4-3.phase5.png)
