@@ -1,0 +1,17 @@
+#!/bin/bash
+solution_path_arr=$(ls . | grep -E ".txt$")
+pass_count=0
+failure_count=0
+
+for s in ${solution_path_arr[*]}; do
+	filename="./"$s
+	result=$(../../hex2raw -i $filename |../../rtarget -q | grep -E "PASS")
+	if [ $result ]; then
+		pass_count=`expr ${pass_count} + 1`
+	else
+		failure_count=`expr ${failure_count} + 1`
+	fi
+done
+
+echo "Number of PASS:${pass_count}, FAILURE: ${failure_count}"
+!
