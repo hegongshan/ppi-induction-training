@@ -18,3 +18,8 @@
 指定教材：CSAPP （深入理解计算机系统）
 
 实验网址：http://csapp.cs.cmu.edu/3e/labs.html
+
+
+### [9.kubernetes](./9.k8s/)
+
+推荐教材：Kubernetes in Action
