@@ -2,7 +2,7 @@
 
 #### k8s安装使用
 
-官方文档：https://minikube.sigs.k8s.io/docs/start/
+官方文档：[https://minikube.sigs.k8s.io/docs/start/](https://minikube.sigs.k8s.io/docs/start/)
 
 * 安装minikube
 
