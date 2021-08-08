@@ -18,8 +18,8 @@ void transpose_32x32(int M, int N, int A[N][M], int B[M][N])
     int i, j, k;
     int x0, x1, x2, x3, x4, x5, x6, x7;
 
-    for (i = 0; i < M; i += 8) {
-        for (j = 0; j < N; j += 8) {
+    for (i = 0; i < N; i += 8) {
+        for (j = 0; j < M; j += 8) {
             for (k = i; k < i + 8; k++) {          
                 x0 = A[k][j];
                 x1 = A[k][j + 1];

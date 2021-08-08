@@ -6,6 +6,7 @@
 
 在线教程：https://www.runoob.com/linux/linux-shell.html
 
+
 #### [2.C Programming Language](./2.c-programming-language/)
 
 推荐教材：K&R （C程序设计语言）
@@ -20,12 +21,12 @@
 实验网址：http://csapp.cs.cmu.edu/3e/labs.html
 
 
-### [6.Linux Device Drivers](./6.linux-device-drivers)
+#### [6.Linux Device Drivers](./6.linux-device-drivers)
 
 指定教材：《Linux Device Drivers》(Linux设备驱动程序)
 
 
-### [8.Docker](./8.docker/)
+#### [8.Docker](./8.docker/)
 
 参考文档
 
@@ -37,6 +38,7 @@
 
 * 重置Docker里的GitLab管理员用户密码 https://www.cnblogs.com/boboblue/p/12033909.html
 
-### [9.kubernetes](./9.k8s/)
+
+#### [9.kubernetes](./9.k8s/)
 
 推荐教材：Kubernetes in Action
