@@ -36,6 +36,24 @@
 实验网址：http://csapp.cs.cmu.edu/3e/labs.html
 
 
-### [9.kubernetes](./9.k8s/)
+#### [6.Linux Device Drivers](./6.linux-device-drivers)
+
+指定教材：《Linux Device Drivers》(Linux设备驱动程序)
+
+
+#### [8.Docker](./8.docker/)
+
+参考文档
+
+* htttps://docs.docker.com/get-started/
+
+* CentOS Docker安装 https://www.runoob.com/docker/centos-docker-install.html
+
+* 使用Docker搭建自己的GitLab https://blod.csdn.net/weixin_39897218/article/details/110662273
+
+* 重置Docker里的GitLab管理员用户密码 https://www.cnblogs.com/boboblue/p/12033909.html
+
+
+#### [9.kubernetes](./9.k8s/)
 
 推荐教材：Kubernetes in Action

@@ -43,3 +43,33 @@
 [实验文件](./attacklab-handout/solutions/phase5_solution/solution1.txt)
 
 ![phase5实验结果](../img/4-3.phase5.png)
+
+#### 4.Cache Lab
+
+* Part A: Writing a Cache Simulator
+
+[实验代码](./cachelab-handout/csim.c)
+
+* Part B: Optimizing Matrix Transpose
+
+[实验代码](./cachelab-handout/trans.c)
+
+![实验结果](../img/4-4.cachelab.png)
+
+#### 5.Shell Lab
+
+[实验代码](./shlab-handout/tsh.c)
+
+* 为所有的trace文件生成输出tsh.out
+
+```python3
+python3 test.py 
+```
+
+* 比较tshref.out和tsh.out
+
+#### 6.Malloc Lab
+
+[实验代码](./malloclab-handout/mm.c)
+
+![实验结果](../img/4-6.malloclab.png)
