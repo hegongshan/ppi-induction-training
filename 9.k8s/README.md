@@ -2,7 +2,7 @@
 
 #### k8s安装使用
 
-官方文档：https://minikube.sigs.k8s.io/docs/start/
+官方文档：[https://minikube.sigs.k8s.io/docs/start/](https://minikube.sigs.k8s.io/docs/start/)
 
 * 安装minikube
 
@@ -24,7 +24,7 @@ minikube start
 ```shell
 curl -LO https://storage.googleapis.com/kubernetes-release/release/\
 $(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)\
-/bin/linux/amd64/kubectl 
+/bin/linux/amd64/kubectl \ 
 && chmod +x kubectl \
 && sudo mv kubectl /usr/local/bin/
 ```
